@@ -1,7 +1,7 @@
 
 Sprius is a Chrome Extension, created with ReactJS, that integerates with player.siriusxm.com to allow you to view the currently streaming track and bookmark it to Chrome Sync Storage.  The list can then be managed and allow you to search for the track in Spotify.
 
-![screenshot_1](./screenshot_1.png?raw=true) ![screenshot_2](./screenshot_2.png?raw=true)
+![screenshot_1](./screenshot_1.png?raw=true =250x) ![screenshot_2](./screenshot_2.png?raw=true =250x)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
