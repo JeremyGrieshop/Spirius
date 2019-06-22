@@ -1,9 +1,11 @@
 
-Sprius is a Chrome Extension, created with ReactJS, that integerates with player.siriusxm.com to allow you to view the currently streaming track and bookmark it to Chrome Sync Storage.  The list can then be managed and allow you to search for the track in Spotify.
+# Spirius
+
+Spirius is a Chrome Extension, created with ReactJS, that integerates with player.siriusxm.com to allow you to view the currently streaming track and bookmark it to Chrome Sync Storage.  The list can then be managed and allow you to search for the track in Spotify.
 
 ## Screenshots
 
-<img src="./screenshot_1.png?raw=true" width="400"> <img src="./screenshot_2.png?raw=true" width="400">
+<img src="./screenshot_1.png?raw=true" width="400" style="vertical-align: top; margin-right: 10px;"> <img src="./screenshot_2.png?raw=true" width="400">
 
 
 ## Building
@@ -23,3 +25,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Deployment
 
 Once the package has been built, open Chrome Extensions page and click the "Load unpacked" Button to browse for the extension code.  Select the "build" folder that was created in the "npm build" step.
+
+## Installation from sirius.crx
+
+After you download the sirius.crx from releases, simply visit chrome://extensions/ and drag the sirius.crx over to the Extensions Page, and follow the instructions.
