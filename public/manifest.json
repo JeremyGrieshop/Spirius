@@ -1,6 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "spirius",
+  "name": "Spirius",
+  "description": "A SiriusXM Radio chrome extension to save tracks and view them on Spotify.",
+  "default_locale": "en",
   "version": "0.1",
   "content_scripts": [
     {
