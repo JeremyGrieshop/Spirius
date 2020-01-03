@@ -35,8 +35,11 @@ var trackCallback = function(mutationsList, observer) {
 var callback = function(mutationsList, observer) {
   for (var mutation of mutationsList) {
       if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+
         if (mutation.addedNodes[0].className === "channel-number") {
           var node = mutation.addedNodes[0];
+
+          currentChannel = node.textContent ? node.textContent.trim() : undefined;
 
           var channelObserver = new MutationObserver(channelCallback);
           channelObserver.observe(node, 
@@ -45,12 +48,16 @@ var callback = function(mutationsList, observer) {
         } else if (mutation.addedNodes[0].className === "artist-name") {
           var node = mutation.addedNodes[0];
 
+          currentArtist = node.textContent ? node.textContent.trim() : undefined;
+
           var artistObserver = new MutationObserver(artistCallback);
           artistObserver.observe(node, 
             {childList: true, characterData: true, attributes: true, subtree: true});
 
         } else if (mutation.addedNodes[0].className === "track-name") {
           var node = mutation.addedNodes[0];
+
+          currentTrack = node.textContent ? node.textContent.trim() : undefined;
 
           var trackObserver = new MutationObserver(trackCallback);
           trackObserver.observe(node, 

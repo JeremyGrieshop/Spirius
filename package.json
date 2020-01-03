@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mkdir -p build/_locales/en && cp messages.json build/_locales/en/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

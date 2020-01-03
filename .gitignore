@@ -3,3 +3,4 @@ node_modules
 spirius.crx
 build.crx
 build.pem
+.DS_Store

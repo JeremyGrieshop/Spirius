@@ -48,7 +48,7 @@ const App = () => {
 
   useEffect(() => {
     const tabQuery = {
-      currentWindow: true, url: "https://player.siriusxm.com/*"
+      url: "https://player.siriusxm.com/*"
     };
 
     chrome.tabs.query(tabQuery, (tabs) => {
@@ -56,12 +56,15 @@ const App = () => {
         try {
           chrome.tabs.sendMessage(tabs[0].id, {action: "get_info"}, function(response) {
             if (response) {
+
               setChannel(response.channel);
               setArtist(response.artist);
               setTrack(response.track);
             }
           });
-        } catch (error) {}
+        } catch (error) {
+          console.log(error);
+        }
       }
     });
   }, []);
@@ -129,7 +132,7 @@ const App = () => {
                 <Tooltip title="Find Track in Spotify" enterDelay={500}>
                   <IconButton 
                     className={classes.hoverButton}
-                    href={"https://open.spotify.com/search/songs/" + item.artist + " " + item.track}
+                    href={"https://open.spotify.com/search/" + encodeURI(item.artist + " " + item.track)}
                     target="_blank"
                   >
                     <OpenInNew />
